@@ -144,7 +144,7 @@ namespace OpenHardwareMonitor.Hardware.LPC {
       controls = new float?[3];
 
       // IT8721F, IT8728F and IT8772E use a 12mV resultion ADC, all others 16mV
-      if (chip == Chip.IT8721F || chip == Chip.IT8728F || chip == Chip.IT8771E 
+      if (chip == Chip.IT8721F || chip == Chip.IT8620E || chip == Chip.IT8728F || chip == Chip.IT8771E 
         || chip == Chip.IT8772E) 
       {
         voltageGain = 0.012f;
@@ -173,7 +173,8 @@ namespace OpenHardwareMonitor.Hardware.LPC {
         case Chip.IT8721F:
           gpioCount = 8;
           break;
-        case Chip.IT8705F: 
+        case Chip.IT8705F:
+        case Chip.IT8620E:
         case Chip.IT8728F:
         case Chip.IT8771E:
         case Chip.IT8772E:
